@@ -157,7 +157,7 @@ export class BarVerticalStackedComponent extends BaseChartComponent {
   getGroupDomain() {
     const domain = [];
     for (const group of this.results) {
-      if (!domain.includes(group.name)) {
+      if (domain.indexOf(group.name) == -1) {
         domain.push(group.name);
       }
     }
@@ -169,7 +169,7 @@ export class BarVerticalStackedComponent extends BaseChartComponent {
     const domain = [];
     for (const group of this.results) {
       for (const d of group.series) {
-        if (!domain.includes(d.name)) {
+        if (domain.indexOf(d.name) == -1) {
           domain.push(d.name);
         }
       }

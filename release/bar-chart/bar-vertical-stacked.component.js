@@ -56,7 +56,7 @@ export var BarVerticalStackedComponent = (function (_super) {
         var domain = [];
         for (var _i = 0, _a = this.results; _i < _a.length; _i++) {
             var group = _a[_i];
-            if (!domain.includes(group.name)) {
+            if (domain.indexOf(group.name) == -1) {
                 domain.push(group.name);
             }
         }
@@ -68,7 +68,7 @@ export var BarVerticalStackedComponent = (function (_super) {
             var group = _a[_i];
             for (var _b = 0, _c = group.series; _b < _c.length; _b++) {
                 var d = _c[_b];
-                if (!domain.includes(d.name)) {
+                if (domain.indexOf(d.name) == -1) {
                     domain.push(d.name);
                 }
             }
